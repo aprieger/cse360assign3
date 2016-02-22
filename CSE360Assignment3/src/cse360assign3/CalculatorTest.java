@@ -66,10 +66,18 @@ public class CalculatorTest
 		assertEquals(testCalc.getTotal(), 0);
 	}
 
+	// test to assert that getHistory(), correctly returns the string of actions computed
+	// to test we will call add (10), subtract (2), multiply (3), divide(6), and assertEquals
+	// the return value to: "0 + 10 - 2 * 3 / 6" (0 at the beginning for the initialization)
 	@Test
 	public void testGetHistory()
 	{
-		fail("Not yet implemented");
+		Calculator testCalc = new Calculator();
+		testCalc.add (10);
+		testCalc.subtract (2);
+		testCalc.multiply (3);
+		testCalc.divide(6);
+		assertEquals(testCalc.getHistory(), "0 + 10 - 2 * 3 / 6");
 	}
 
 }
